@@ -237,7 +237,7 @@ class RspecHtmlFormatter < RSpec::Core::Formatters::BaseFormatter
       @durations = duration_keys.zip(duration_values.map{|d| d.to_f.round(5)})
       @summary_duration = duration_values.map{|d| d.to_f.round(5)}.inject(0) { |sum, i| sum + i }.to_s(:rounded, precision: 5)
       @total_examples = @passed + @failed + @pending
-      template_file = File.read(File.dirname(__FILE__) + '/../templates/overview.erb')
+      template_file = File.read(File.dirname(__FILE__) + '/../templates/index.erb')
       f.puts ERB.new(template_file).result(binding)
     end
   end

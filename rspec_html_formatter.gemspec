@@ -43,7 +43,7 @@ Gem::Specification.new do |s|
     "spec/penders_spec.rb",
     "spec/rspec_html_formatter_spec.rb",
     "spec/test2_spec.rb",
-    "templates/overview.erb",
+    "templates/index.erb",
     "templates/report.erb"
   ]
   s.homepage = "http://github.com/kingsleyh/rspec_reports_formatter"
