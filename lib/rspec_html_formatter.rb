@@ -63,7 +63,7 @@ def os
     formatter = Rouge::Formatters::HTML.new(css_class: 'highlight', line_numbers: true, start_line: start_line+1)
     lexer = Rouge::Lexers::Ruby.new
     formatter.format(lexer.lex(source.encode('utf-8')))
-    end 
+    end
   end
 
   def process_message
@@ -219,7 +219,7 @@ class RspecHtmlFormatter < RSpec::Core::Formatters::BaseFormatter
   end
 
   def close(notification)
-    File.open("#{REPORT_PATH}/overview.html", 'w') do |f|
+    File.open("#{REPORT_PATH}/index.html", 'w') do |f|
       @overview = @all_groups
 
       @passed = @overview.values.map { |g| g[:passed].size }.inject(0) { |sum, i| sum + i }
